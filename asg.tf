@@ -185,8 +185,8 @@ resource "aws_autoscaling_group" "master-eu-west-1c-masters-anastasiaclipcodevop
 resource "aws_autoscaling_group" "nodes-anastasiaclipcodevops-com" {
   name                 = "nodes.anastasiaclipcodevops.com"
   launch_configuration = "${aws_launch_configuration.nodes-anastasiaclipcodevops-com.id}"
-  max_size             = 3
-  min_size             = 3
+  max_size             = "${var.max_size}"
+  min_size             = "${var.min_size}"
   vpc_zone_identifier  = ["${aws_subnet.eu-west-1a-anastasiaclipcodevops-com.id}", "${aws_subnet.eu-west-1b-anastasiaclipcodevops-com.id}", "${aws_subnet.eu-west-1c-anastasiaclipcodevops-com.id}"]
 
   tag = {
