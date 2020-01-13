@@ -1,5 +1,5 @@
 environment = "stage"
-s3_bucket = "dev.anastasiaclipcodevops.com" #Will be used to set backend.tf
+s3_bucket = "stage-eu.anastasiaclipcodevops.com" #Will be used to set backend.tf
 s3_folder_project = "application"          #Will be used to set backend.tf
 s3_folder_region = "eu-west-1"             #Will be used to set backend.tf
 s3_folder_type = "state"                   #Will be used to set backend.tf
